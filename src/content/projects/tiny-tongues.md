@@ -1,7 +1,7 @@
 ---
 title: "Tiny Tongues"
 category: "Apps for Families & Kids"
-summary: "A simple, ad-free flashcard app I built to teach my daughter Cantonese — now with Mandarin, French, and English too. Big colorful cards, tap-to-hear audio, no accounts, no ads, no tracking."
+summary: "A simple, ad-free flashcard app I built to teach my daughter Cantonese - now with Mandarin, French, and English too. Big colorful cards, tap-to-hear audio, no accounts, no ads, no tracking."
 status: "Beta · TestFlight"
 accessLabel: "Join the TestFlight beta"
 accessUrl: "https://testflight.apple.com/join/12UYZeeS"
@@ -15,14 +15,14 @@ order: 1
 I'm teaching my daughter to speak Cantonese, and if you're a Cantonese speaker in North
 America, you know it's really hard to find good Cantonese content for kids. A lot of the
 language-learning apps I did find were paid or too advanced for her. So Tiny Tongues was
-born — a simple, adorable flashcard app that helps kids (and grown-ups) learn Cantonese
+born - a simple, adorable flashcard app that helps kids (and grown-ups) learn Cantonese
 words. I've also used it to expand my own vocabulary (can you say squirrel in Cantonese?), 
 so I can confidently say it's useful for all ages.
 
 ## What it does
 
 - Tap through a range of categories including: **Animals, Vehicles, Colors, and Shapes**, with more decks planned.
-- Tap a card to hear the word — great for kids who are pre-reading or just starting to talk.
+- Tap a card to hear the word - great for kids who are pre-reading or just starting to talk.
 - Large, high-contrast cards designed for small hands and short attention spans.
 - No accounts, no ads, no data collection. It's just a flashcard app.
 - Bonus: I added support for Mandarin, French (for my nephew in Canada), and English (because why not).

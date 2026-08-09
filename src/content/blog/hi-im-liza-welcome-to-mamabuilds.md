@@ -29,11 +29,11 @@ rebuilding myself and the world around me as life changes.
 
 Two things, mainly:
 
-- **[Projects](/projects)** — small, real apps I've built with AI. Right now that's mostly
+- **[Projects](/projects)** - small, real apps I've built with AI. Right now that's mostly
   tools to help me as a product manager and things I've made for my own family, starting with
   Tiny Tongues, a language-learning flashcard app for my toddler that's in beta right now.
   I plan to keep adding more over time.
-- **[Blog](/blog)** — write-ups on the actual process. What prompts worked, what I got
+- **[Blog](/blog)** - write-ups on the actual process. What prompts worked, what I got
   completely wrong, how I think about scoping a side project down to something shippable, and
   general lessons from being a PM who's now also (sort of) an engineer.
 
