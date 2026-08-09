@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects', ({ data }) => !data.draft);
+
+// Controls the order categories appear in on this page. Add a category here
+// to pin its position — anything not listed falls back to alphabetical order
+// after the pinned ones, so a brand-new category still shows up automatically
+// without needing an edit here.
+const CATEGORY_ORDER = ['Apps for Families & Kids', 'Apps for Product Managers'];
+
+const categories = [...new Set(allProjects.map((p) => p.data.category))].sort((a, b) => {
+  const indexA = CATEGORY_ORDER.indexOf(a);
+  const indexB = CATEGORY_ORDER.indexOf(b);
+  if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+  if (indexA !== -1) return -1;
+  if (indexB !== -1) return 1;
+  return a.localeCompare(b);
+});
+
+const grouped = categories.map((category) => ({
+  category,
+  items: allProjects
+    .filter((p) => p.data.category === category)
+    .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title)),
+}));
+---
+
+<BaseLayout
+  title="Projects"
+  description="Small apps I've built with AI — for fellow product managers, and for my family."
+>
+  <section class="mx-auto max-w-5xl px-6 pb-8 pt-16">
+    <p class="font-semibold uppercase tracking-[0.25em] text-terracotta text-sm">Projects</p>
+    <h1 class="mt-3 font-display text-4xl font-semibold text-ink">Things I've built</h1>
+    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
+      Every project here started as "wouldn't it be nice if..." — then got built with a lot of
+      AI help, some trial and error, and whatever time I had between meetings and bedtime.
+      New projects get added regularly, so check back.
+    </p>
+  </section>
+
+  {grouped.map(({ category, items }) => (
+    <section class="mx-auto max-w-5xl px-6 py-10">
+      <h2 class="font-display text-2xl font-semibold text-ink">{category}</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        {items.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </section>
+  ))}
+
+  {allProjects.length === 0 && (
+    <section class="mx-auto max-w-5xl px-6 py-10 text-ink-soft">
+      New projects are on the way — check back soon!
+    </section>
+  )}
+</BaseLayout>

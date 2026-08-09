@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { title, description, pubDate, tags } = post.data;
+const { Content } = await render(post);
+
+const formattedDate = pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="mx-auto max-w-3xl px-6 py-16">
+    <a href="/blog" class="text-sm font-semibold text-ink-soft hover:text-terracotta">&larr; All posts</a>
+
+    <time datetime={pubDate.toISOString()} class="mt-6 block text-xs font-semibold uppercase tracking-wide text-terracotta">
+      {formattedDate}
+    </time>
+    <h1 class="mt-2 font-display text-4xl font-semibold text-ink">{title}</h1>
+
+    {tags.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span class="rounded-full bg-plum-light px-3 py-1 text-xs font-medium text-plum">#{tag}</span>
+        ))}
+      </div>
+    )}
+
+    <div class="prose prose-headings:font-display prose-headings:text-ink prose-p:text-ink-soft prose-a:text-terracotta prose-strong:text-ink mt-10 max-w-none">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

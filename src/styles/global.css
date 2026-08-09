@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Warm, editorial palette — cream paper, terracotta accent, deep ink text.
+     Two secondary accents give each project category its own identity. */
+  --color-cream: #fdf6ee;
+  --color-paper: #fbf1e4;
+  --color-sand: #f2e2cb;
+  --color-ink: #2b2622;
+  --color-ink-soft: #5a5148;
+
+  --color-terracotta: #e2724a;
+  --color-terracotta-dark: #c85a34;
+  --color-terracotta-light: #f6ded1;
+
+  --color-sage: #5f7a5f;
+  --color-sage-light: #dfe8dc;
+
+  --color-plum: #4d4066;
+  --color-plum-light: #e6e0ef;
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

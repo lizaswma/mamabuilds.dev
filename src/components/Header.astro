@@ -1,0 +1,43 @@
+---
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/blog', label: 'Blog' },
+];
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string) {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="border-b border-sand/80 bg-cream/90 backdrop-blur">
+  <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-4 sm:px-6 sm:py-5">
+    <a href="/" class="group flex shrink-0 items-baseline gap-2">
+      <span class="font-display text-lg font-semibold tracking-tight text-ink sm:text-xl">
+        mama<span class="text-terracotta">builds</span>
+      </span>
+      <span class="hidden font-body text-xs uppercase tracking-[0.2em] text-ink-soft sm:inline">
+        .dev
+      </span>
+    </a>
+
+    <nav class="flex items-center gap-0.5 sm:gap-2">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'rounded-full px-2.5 py-1.5 text-xs font-medium transition-colors sm:px-4 sm:py-2 sm:text-sm',
+            isActive(item.href)
+              ? 'bg-terracotta text-cream'
+              : 'text-ink-soft hover:bg-sand/70 hover:text-ink',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
