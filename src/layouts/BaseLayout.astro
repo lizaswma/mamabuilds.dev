@@ -45,6 +45,13 @@ const faviconType = favicon.endsWith('.svg') ? 'image/svg+xml' : 'image/png';
     />
 
     <title>{pageTitle}</title>
+
+    <!-- Cloudflare Web Analytics -->
+    <script
+      type="module"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "8dcff04c676e4bb5a08262ef59cecd6d"}'></script>
+    <!-- End Cloudflare Web Analytics -->
   </head>
   <body class="flex min-h-screen flex-col">
     <Header />
