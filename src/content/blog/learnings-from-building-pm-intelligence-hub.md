@@ -1,5 +1,5 @@
 ---
-title: "Learnings from Building PM Intelligence Hub"
+title: "Learnings from building PM Intelligence Hub"
 description: "What I learned building my first real end-to-end AI app - from asking Claude to write a PRD to the humbling reality of pushing something into production."
 pubDate: 2026-08-09
 tags: ["ClaudeCode", "PMIntelligenceHub", "ProductManagement", "VibeCoding"]
