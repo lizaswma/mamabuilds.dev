@@ -2,7 +2,7 @@
 title: "Hi, I'm Liza, welcome to MamaBuilds"
 description: "Why a product manager mom who hasn't coded in two decades decided to start building apps with AI, and why she's writing about it in public."
 pubDate: 2026-08-08
-tags: ["intro"]
+tags: ["Intro"]
 ---
 
 If you'd told me two years ago that I'd be shipping my own iOS app, I would have laughed and
