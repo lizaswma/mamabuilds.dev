@@ -1,6 +1,6 @@
 ---
 title: "PM Intelligence Hub"
-category: "Apps for Product Managers"
+category: "Product Management"
 summary: "A daily AI news podcast that turns the day's headlines into a short briefing - with PM framing on what each update actually means for your job, not just what happened."
 status: "Beta"
 accessLabel: "Try the beta"

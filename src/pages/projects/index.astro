@@ -9,7 +9,7 @@ const allProjects = await getCollection('projects', ({ data }) => !data.draft);
 // to pin its position — anything not listed falls back to alphabetical order
 // after the pinned ones, so a brand-new category still shows up automatically
 // without needing an edit here.
-const CATEGORY_ORDER = ['Apps for Families & Kids', 'Apps for Product Managers'];
+const CATEGORY_ORDER = ['Family & Kids', 'Product Management'];
 
 const categories = [...new Set(allProjects.map((p) => p.data.category))].sort((a, b) => {
   const indexA = CATEGORY_ORDER.indexOf(a);
@@ -20,8 +20,16 @@ const categories = [...new Set(allProjects.map((p) => p.data.category))].sort((a
   return a.localeCompare(b);
 });
 
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
 const grouped = categories.map((category) => ({
   category,
+  slug: slugify(category),
   items: allProjects
     .filter((p) => p.data.category === category)
     .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title)),
@@ -42,14 +50,67 @@ const grouped = categories.map((category) => ({
     </p>
   </section>
 
-  {grouped.map(({ category, items }) => (
-    <section class="mx-auto max-w-5xl px-6 py-10">
+  {grouped.length > 1 && (
+    <nav
+      id="category-nav"
+      aria-label="Jump to category"
+      class="sticky top-0 z-10 border-y border-sand/80 bg-cream/95 backdrop-blur"
+    >
+      <div class="mx-auto flex max-w-5xl gap-2 overflow-x-auto px-6 py-3">
+        {grouped.map(({ category, slug, items }) => (
+          <a
+            href={`#${slug}`}
+            data-category-link={slug}
+            class="flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-medium text-ink-soft transition-colors hover:bg-sand/70 sm:text-sm"
+          >
+            {category}
+            <span class="rounded-full bg-sand/80 px-1.5 py-0.5 text-[0.7em] font-semibold text-ink-soft">
+              {items.length}
+            </span>
+          </a>
+        ))}
+      </div>
+    </nav>
+  )}
+
+  {grouped.map(({ category, slug, items }) => (
+    <section id={slug} class="mx-auto max-w-5xl scroll-mt-16 px-6 py-10">
       <h2 class="font-display text-2xl font-semibold text-ink">{category}</h2>
       <div class="mt-6 grid gap-6 sm:grid-cols-2">
         {items.map((project) => <ProjectCard project={project} />)}
       </div>
     </section>
   ))}
+
+  {grouped.length > 1 && (
+    <script>
+      const links = document.querySelectorAll<HTMLAnchorElement>('[data-category-link]');
+      const sections = Array.from(links)
+        .map((link) => document.getElementById(link.dataset.categoryLink!))
+        .filter((el): el is HTMLElement => el !== null);
+
+      const setActive = (slug: string | null) => {
+        links.forEach((link) => {
+          const isActive = link.dataset.categoryLink === slug;
+          link.classList.toggle('bg-terracotta', isActive);
+          link.classList.toggle('text-cream', isActive);
+          link.classList.toggle('text-ink-soft', !isActive);
+        });
+      };
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          if (visible.length > 0) setActive(visible[0].target.id);
+        },
+        { rootMargin: '-120px 0px -70% 0px' }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    </script>
+  )}
 
   {allProjects.length === 0 && (
     <section class="mx-auto max-w-5xl px-6 py-10 text-ink-soft">

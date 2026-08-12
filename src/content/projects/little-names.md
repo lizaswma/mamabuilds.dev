@@ -1,6 +1,6 @@
 ---
 title: "Little Names"
-category: "Apps for Families & Kids"
+category: "Family & Kids"
 summary: "A simple app for couples picking a baby name together - suggest candidates, swipe yay or nay privately, then compare notes to find the names you both love."
 status: "In progress"
 accessLabel: "Try Little Names"
