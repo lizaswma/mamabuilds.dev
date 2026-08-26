@@ -29,8 +29,8 @@ actively being discouraged from using it. This was disappointing! If there's one
 tell you, it's that dogfooding your own app gives you deeper and better insights into how to
 make it better, including the important polish stuff that AI sometimes misses. For example, one
 of the things I wanted to build was a HealthKit integration so my app could just pull my glucose
-data straight from my CGM. However, no plans for polish can beat the requirement that your
-medical team mandates you use a specific app.
+data straight from my CGM. However, no amount of polish beats your medical team mandating a
+specific app.
 
 ## The moat isn't really Dexcom's
 
