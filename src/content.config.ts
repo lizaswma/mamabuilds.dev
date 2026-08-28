@@ -28,6 +28,16 @@ const projects = defineCollection({
     // Optional per-project browser tab icon for this project's detail page
     // only. Path to a file in public/. Falls back to the site favicon if unset.
     favicon: z.string().optional(),
+    // Set true for Android apps to show the "early Android access via the
+    // Google Group" note on the project's detail page.
+    androidEarlyAccess: z.boolean().default(false),
+    // Beta distribution links. Set whichever apply; when any is present the
+    // project page shows a "Join the beta" block with per-platform steps.
+    // iOS is a direct TestFlight install; Android requires joining the Google
+    // Group first (Play closed-testing rule), then the opt-in link.
+    betaTestFlightUrl: z.string().optional(),
+    betaAndroidGroupUrl: z.string().optional(),
+    betaAndroidOptInUrl: z.string().optional(),
     // Lower numbers show first within a category. Ties fall back to title.
     order: z.number().default(100),
     // Set true to hide a project without deleting the file.
