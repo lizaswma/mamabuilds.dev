@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import JoinCTA from '../../components/JoinCTA.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -42,5 +43,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
     <div class="prose prose-headings:font-display prose-headings:text-ink prose-p:text-ink-soft prose-a:text-terracotta prose-strong:text-ink mt-10 max-w-none">
       <Content />
     </div>
+
+    <JoinCTA />
   </article>
 </BaseLayout>

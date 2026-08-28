@@ -2,9 +2,10 @@
 title: "Tiny Tongues"
 category: "Family & Kids"
 summary: "A simple, ad-free flashcard app I built to teach my daughter Cantonese - now with Mandarin, French, and English too. Big colorful cards, tap-to-hear audio, no accounts, no ads, no tracking."
-status: "Beta · TestFlight"
-accessLabel: "Join the TestFlight beta"
-accessUrl: "https://testflight.apple.com/join/12UYZeeS"
+status: "Beta · iOS + Android"
+betaTestFlightUrl: "https://testflight.apple.com/join/12UYZeeS"
+betaAndroidGroupUrl: "https://groups.google.com/g/mamabuilds"
+betaAndroidOptInUrl: "https://play.google.com/apps/testing/dev.mamabuilds.tinytongues"
 iconImage: "/images/tiny-tongues/icon.jpg"
 favicon: "/images/tiny-tongues/favicon.png"
 order: 1
@@ -34,13 +35,12 @@ so I can confidently say it's useful for all ages.
   <img src="/images/tiny-tongues/screenshot-card.jpg" alt="A Tiny Tongues flashcard for 'cat', showing the character, pinyin, and English translation" class="w-44 rounded-2xl border border-sand shadow-sm" />
 </div>
 
-## Try it
-
-Tiny Tongues is currently in **beta on TestFlight** for iOS. It's still rough
-around the edges, but I'm actively adding decks and fixing bugs. It's stable enough for daily use in 
-our house. Feedback of any kind is very welcome.
-
 ## How I built it
 
-This was my first real iOS app, so I learned A LOT and had a lot of fun. I'll write up my experience
-(and frustrations) on [the blog](/blog).
+This was my first real iOS app, so I learned A LOT and had a lot of fun. I wrote up the design
+process (and frustrations) in [The story behind Tiny Tongues](/blog/story-behind-tiny-tongues).
+
+## Where it's at
+
+It's stable enough for daily use in our house, but still rough around the edges - I'm
+actively adding decks and fixing bugs, and feedback of any kind is very welcome.

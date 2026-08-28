@@ -1,0 +1,82 @@
+---
+// Reusable "Join the beta" block for a project's detail page, for apps in
+// testing on iOS and/or Android.
+//
+//   - iOS: a direct TestFlight install, no sign-up.
+//   - Android: this is a Google Play *closed* test (required for a new personal
+//     developer account to reach production). Play only serves it to Google
+//     Group members who have then opted in. Group membership is instant (set
+//     the group to auto-approve joins), but Play can take a few hours to
+//     activate a tester after they opt in - the copy says so. Publish the
+//     opt-in ("tester") link here so testers don't have to dig for it.
+//
+// Driven entirely by frontmatter - a project shows this block by setting any
+// of `betaTestFlightUrl` / `betaAndroidGroupUrl` / `betaAndroidOptInUrl`.
+interface Props {
+  appName: string;
+  testFlightUrl?: string;
+  androidGroupUrl?: string;
+  androidOptInUrl?: string;
+}
+
+const { appName, testFlightUrl, androidGroupUrl, androidOptInUrl } = Astro.props;
+
+const platformLabel =
+  testFlightUrl && androidGroupUrl ? 'iOS and Android' : testFlightUrl ? 'iOS' : 'Android';
+
+const linkClass = 'font-semibold text-terracotta underline-offset-4 hover:underline';
+const buttonClass =
+  'inline-flex items-center gap-1.5 rounded-full bg-terracotta px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-terracotta-dark';
+---
+
+<section id="join-the-beta" class="not-prose mt-16 rounded-2xl border border-sand bg-paper p-6 sm:p-8">
+  <h2 class="font-display text-2xl font-semibold text-ink">Join the beta</h2>
+  <p class="mt-2 leading-relaxed text-ink-soft">
+    {appName} is in testing on {platformLabel}.
+  </p>
+
+  <div class="mt-6 grid gap-x-8 gap-y-8 sm:grid-cols-2">
+    {testFlightUrl && (
+      <div>
+        <p class="font-display text-lg font-semibold text-ink">iPhone &amp; iPad</p>
+        <p class="mt-1 leading-relaxed text-ink-soft">
+          Open the TestFlight link and install&nbsp;- no sign-up.
+        </p>
+        <a href={testFlightUrl} target="_blank" rel="noopener noreferrer" class={`mt-4 ${buttonClass}`}>
+          Get it on TestFlight &rarr;
+        </a>
+      </div>
+    )}
+
+    {androidGroupUrl && (
+      <div>
+        <p class="font-display text-lg font-semibold text-ink">Android</p>
+        <p class="mt-1 leading-relaxed text-ink-soft">
+          One-time setup, then updates are automatic:
+        </p>
+        <ol class="mt-3 space-y-1.5 leading-relaxed text-ink-soft">
+          <li>
+            <span class="font-semibold text-ink">1.</span> Join the
+            <a href={androidGroupUrl} target="_blank" rel="noopener noreferrer" class={linkClass}> Google Group</a>.
+            It's also where I send occasional updates.
+          </li>
+          <li>
+            <span class="font-semibold text-ink">2.</span> Open the
+            {androidOptInUrl ? (
+              <a href={androidOptInUrl} target="_blank" rel="noopener noreferrer" class={linkClass}> tester link</a>
+            ) : (
+              ' tester link'
+            )} and tap <em>Become a tester</em>.
+          </li>
+          <li>
+            <span class="font-semibold text-ink">3.</span> Install from the Play Store. Access can
+            take a few hours to activate&nbsp;- if it's not there yet, check back later.
+          </li>
+        </ol>
+        <a href={androidGroupUrl} target="_blank" rel="noopener noreferrer" class={`mt-4 ${buttonClass}`}>
+          Join the group &rarr;
+        </a>
+      </div>
+    )}
+  </div>
+</section>
