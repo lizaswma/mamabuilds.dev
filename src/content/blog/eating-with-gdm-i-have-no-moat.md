@@ -3,6 +3,7 @@ title: "Eating with GDM - I have no moat!"
 description: "I built Eat with GDM to fix my own gestational diabetes logging headaches, then watched Dexcom make it obsolete before I even finished dogfooding it."
 pubDate: 2026-08-25
 tags: ["ClaudeCode", "EatWithGDM", "VibeCoding"]
+project: eat-with-gdm
 ---
 
 I built [Eat with GDM](/projects/eat-with-gdm) because I knew I would get gestational diabetes

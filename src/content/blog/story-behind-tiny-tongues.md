@@ -3,6 +3,7 @@ title: "The story behind Tiny Tongues"
 description: "The design process behind building my first iOS app: the product choices that made it easier to build with AI, and the parts AI still couldn't do for me."
 pubDate: 2026-08-14
 tags: ["ClaudeCode", "TinyTongues", "iOSDevelopment", "VibeCoding"]
+project: tiny-tongues
 ---
 
 I built [Tiny Tongues](/projects/tiny-tongues) for my daughter. It was also partly for me,
