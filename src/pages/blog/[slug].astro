@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import JoinCTA from '../../components/JoinCTA.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -12,8 +11,14 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { title, description, pubDate, tags } = post.data;
+const { title, description, pubDate, tags, project } = post.data;
 const { Content } = await render(post);
+
+// Optional link back to a related project page, so posts don't have to carry
+// (and later update) their own "how to try it" details.
+const relatedProject = project
+  ? (await getCollection('projects')).find((p) => p.id === project)
+  : undefined;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -44,6 +49,18 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
       <Content />
     </div>
 
-    <JoinCTA />
+    {relatedProject && (
+      <aside class="not-prose mt-12 flex flex-col gap-3 rounded-xl border border-sand bg-paper/60 p-5 text-sm sm:flex-row sm:items-center sm:justify-between">
+        <p class="leading-relaxed text-ink-soft">
+          <span class="font-semibold text-ink">{relatedProject.data.title}</span>&nbsp;- the project page has the latest on how to try it.
+        </p>
+        <a
+          href={`/projects/${relatedProject.id}`}
+          class="shrink-0 font-semibold text-terracotta underline-offset-4 hover:text-terracotta-dark hover:underline"
+        >
+          View the project &rarr;
+        </a>
+      </aside>
+    )}
   </article>
 </BaseLayout>

@@ -54,6 +54,10 @@ const blog = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
     tags: z.array(z.string()).default([]),
+    // Optional slug of a related project (a filename in src/content/projects/
+    // without the .md). When set, the post ends with a link to that project
+    // page rather than repeating access details that may change.
+    project: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });
