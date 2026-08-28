@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Google Group "mamabuilds" - the list I use for ship notes and beta invites.
+const groupUrl = 'https://groups.google.com/g/mamabuilds';
+const subscribeEmail = 'mamabuilds+subscribe@googlegroups.com';
+const unsubscribeEmail = 'mamabuilds+unsubscribe@googlegroups.com';
+
+const buttonClass =
+  'inline-flex items-center gap-1.5 rounded-full bg-terracotta px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-terracotta-dark';
+const linkClass = 'font-semibold text-terracotta underline-offset-4 hover:underline';
+---
+
+<BaseLayout
+  title="Updates"
+  description="Get an occasional email when I ship a new app or write about what I learned - plus first dibs on beta invites."
+>
+  <section class="mx-auto max-w-2xl px-6 pb-10 pt-16 sm:pt-20">
+    <p class="text-sm font-semibold uppercase tracking-[0.25em] text-terracotta">Updates</p>
+    <h1 class="mt-3 font-display text-4xl font-semibold text-ink">
+      Get an email when there's something worth sharing.
+    </h1>
+    <div class="mt-6 space-y-4 text-lg leading-relaxed text-ink-soft">
+      <p>
+        I send the occasional note when I ship a new app or write up what I learned building
+        it - and beta invites go out here first. No fixed schedule, no spam, and you can leave
+        any time.
+      </p>
+      <p>
+        It runs on a Google Group. Pick whichever way is easier:
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-2xl px-6 pb-20">
+    <div class="space-y-4">
+      <div class="rounded-2xl border border-sand bg-paper p-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
+        <div>
+          <p class="font-display text-lg font-semibold text-ink">With a Google account</p>
+          <p class="mt-2 leading-relaxed text-ink-soft">
+            Open the group and tap <em>Join group</em>. You'll need to be signed in to Google.
+          </p>
+        </div>
+        <a href={groupUrl} target="_blank" rel="noopener noreferrer" class={`mt-4 shrink-0 sm:mt-0 ${buttonClass}`}>
+          Join the group &rarr;
+        </a>
+      </div>
+
+      <div class="rounded-2xl border border-sand bg-paper p-6">
+        <p class="font-display text-lg font-semibold text-ink">By email</p>
+        <p class="mt-2 leading-relaxed text-ink-soft">
+          Send a blank email to{' '}
+          {/* <wbr> lets a narrow screen break the address at the + / @ instead of mid-word */}
+          <a href={`mailto:${subscribeEmail}`} class={linkClass}>mamabuilds+<wbr />subscribe@<wbr />googlegroups.com</a>,
+          then reply to the confirmation you get back. No Google account needed.
+        </p>
+      </div>
+    </div>
+
+    <p class="mt-8 text-sm leading-relaxed text-ink-soft/80">
+      Prefer to look around first? Here's the{' '}
+      <a href={`${groupUrl}/about`} target="_blank" rel="noopener noreferrer" class={linkClass}>
+        group's about page</a>. To unsubscribe later, email{' '}
+      <a href={`mailto:${unsubscribeEmail}`} class={linkClass}>mamabuilds+<wbr />unsubscribe@<wbr />googlegroups.com</a>.
+    </p>
+  </section>
+</BaseLayout>
