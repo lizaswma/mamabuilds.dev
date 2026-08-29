@@ -20,24 +20,20 @@ me. It handed me a build file to upload to the Play Console. Total active time w
 hour, most of it setting up Play Console in the other tab while the build ran.
 
 The app worked on the first build. No debugging loop, no "works on iOS, broken on Android."
-That wasn't luck, but it wasn't my engineering foresight either, because I don't have any. It's
-that every time I told Claude what I wanted this app to be, it steered me toward a choice that
-happened to travel well, and usually explained why:
+That wasn't luck. It wasn't engineering foresight either, because I don't have any. What I had
+was a clear idea of what I wanted the app to be, and every time I told Claude, it steered me
+toward a choice that happened to travel well, and usually explained why:
 
-- **The fiddly interactions run on maintained libraries, not code we wrote by hand.** When I
-  asked for a swipeable card carousel, Claude used a well-established library instead of writing
-  the gesture logic itself, and told me why: things like image rendering, audio, and touch
-  gestures are exactly where hand-written code tends to break when you switch platforms. I
-  didn't know that. I just knew I wanted the cards to swipe nicely.
-- **No backend, no accounts, no ads, no analytics.** Leaving those out was my call, for product
-  reasons: it's a flashcard app for a toddler. Claude was the one who pointed out the bonus:
-  those are the pieces that usually need separate iOS and Android setup, and I had none of them.
+- **Expo, which Claude picked. I didn't know it existed.** My repo has no `ios/` or `android/`
+  folders; they're generated at build time from one config file, so I've never opened Xcode or
+  touched Gradle. The bits that genuinely differ by platform (app icons, permissions, bundle ID
+  and package name) sit side by side in that same file.
+- **The tricky platform-specific parts run on maintained libraries.** Swipe gestures, image
+  rendering, and audio are handled by well-used components, not something we hand-built and
+  have to keep fixing on two fronts.
 - **The card decks come from a server, not the app itself.** I wanted to add new words and
-  languages without making anyone update the app, so Claude set the content up to download
-  from the web. That turned out to work the same regardless of which OS the app is running on.
-- **The Android config already existed.** The package name, the app icon, the permissions were
-  all filled in earlier, during the multi-language work, back when Android was still
-  hypothetical. Past me (and Claude) left the seams in place.
+  languages without making anyone update the app, so the content downloads from the web, which
+  works the same regardless of OS.
 
 If I'd started cold and just told Claude "make this run on Android," I think it still mostly
 would have worked, because the stack was already boring in the right ways. The payoff of
@@ -53,7 +49,7 @@ used Claude mostly to reassure myself the process was normal. There's a $25 one-
 Apple's $99 a year, but the real tell is that Apple treats "who are you" as the gate and Google
 treats "let's get you building" as the goal.
 
-Neither is wrong, exactly. They're just both built for someone who does this professionally.
+Neither is wrong, exactly. They're just built for people who do this professionally.
 Take Play's pre-submission checklist for closed testing: a long list of required tasks, and
 instead of a wizard that walks you through them, the primary button on each task takes you
 *out* of the list. Finish a step, get bounced, navigate back, find your place, repeat. And the
@@ -117,7 +113,7 @@ remembering the next time I'm annoyed at a tool at work, or building one.
 ## If you're thinking about building your own app
 
 If there's any chance you'll want both platforms, commit to that on day one rather than bolting
-it on later. The unglamorous cross-platform choices are what did the real work here. And if
+it on later. The unglamorous cross-platform choices are what did the real work. And if
 you're not even sure the idea is worth shipping yet, build a web app first: faster to iterate
 on, with no build queue, simpler to put in front of people, before you've locked into native at
 all.
