@@ -8,6 +8,7 @@ accessUrl: "https://testflight.apple.com/join/DCC4Q4fc"
 iconImage: "/images/eat-with-gdm/icon.png"
 favicon: "/images/eat-with-gdm/favicon.png"
 order: 1
+added: 2026-08-11
 ---
 
 ## Why I built this

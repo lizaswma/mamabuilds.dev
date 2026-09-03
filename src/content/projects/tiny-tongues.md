@@ -9,6 +9,7 @@ betaAndroidOptInUrl: "https://play.google.com/apps/testing/dev.mamabuilds.tinyto
 iconImage: "/images/tiny-tongues/icon.jpg"
 favicon: "/images/tiny-tongues/favicon.png"
 order: 1
+added: 2026-08-08
 ---
 
 ## Why I built this
