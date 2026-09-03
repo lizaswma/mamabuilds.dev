@@ -9,7 +9,7 @@ const allProjects = await getCollection('projects', ({ data }) => !data.draft);
 // to pin its position — anything not listed falls back to alphabetical order
 // after the pinned ones, so a brand-new category still shows up automatically
 // without needing an edit here.
-const CATEGORY_ORDER = ['Family & Kids', 'Product Management'];
+const CATEGORY_ORDER = ['Family Life', 'For Kids', 'Product Management'];
 
 const categories = [...new Set(allProjects.map((p) => p.data.category))].sort((a, b) => {
   const indexA = CATEGORY_ORDER.indexOf(a);
