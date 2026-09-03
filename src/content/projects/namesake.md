@@ -1,6 +1,6 @@
 ---
 title: "Namesake"
-category: "Family & Kids"
+category: "Family Life"
 summary: "A simple app for couples picking a baby name together - suggest candidates, swipe yay or nay privately, then compare notes to find the names you both love."
 status: "Beta"
 accessLabel: "Try Namesake"
