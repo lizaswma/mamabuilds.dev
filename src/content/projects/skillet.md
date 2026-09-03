@@ -7,7 +7,6 @@ accessLabel: "Try Skillet"
 accessUrl: "https://skillet.mamabuilds.dev/"
 iconImage: "/images/skillet/icon.png"
 favicon: "/images/skillet/favicon.png"
-order: 5
 added: 2026-09-02
 draft: false
 ---

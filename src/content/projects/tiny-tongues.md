@@ -8,7 +8,6 @@ betaAndroidGroupUrl: "https://groups.google.com/g/mamabuilds/about"
 betaAndroidOptInUrl: "https://play.google.com/apps/testing/dev.mamabuilds.tinytongues"
 iconImage: "/images/tiny-tongues/icon.jpg"
 favicon: "/images/tiny-tongues/favicon.png"
-order: 1
 added: 2026-08-08
 ---
 

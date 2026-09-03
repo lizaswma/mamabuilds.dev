@@ -4,12 +4,12 @@ import ProjectCard from '../components/ProjectCard.astro';
 import { getCollection } from 'astro:content';
 
 // Newest additions first (see `added` in the projects schema); fall back to
-// `order` so undated projects still sort sensibly.
+// title so undated projects still sort sensibly.
 const projects = (await getCollection('projects', ({ data }) => !data.draft))
   .sort(
     (a, b) =>
       (b.data.added?.valueOf() ?? 0) - (a.data.added?.valueOf() ?? 0) ||
-      a.data.order - b.data.order
+      a.data.title.localeCompare(b.data.title)
   )
   .slice(0, 2);
 
