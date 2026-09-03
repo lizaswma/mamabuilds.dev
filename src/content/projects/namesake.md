@@ -1,11 +1,12 @@
 ---
-title: "Little Names"
+title: "Namesake"
 category: "Family & Kids"
 summary: "A simple app for couples picking a baby name together - suggest candidates, swipe yay or nay privately, then compare notes to find the names you both love."
-status: "In progress"
-accessLabel: "Try Little Names"
+status: "Beta"
+accessLabel: "Try Namesake"
 accessUrl: "https://little-names-2026.vercel.app/"
-icon: "👶"
+iconImage: "/images/namesake/icon.png"
+favicon: "/images/namesake/favicon.png"
 order: 2
 ---
 
@@ -16,7 +17,7 @@ chatbots to help us brainstorm baby names, and we quickly ended up overwhelmed w
 We needed a way to actually keep track of candidates and see where we agreed (or very much
 didn't).
 
-So I built Little Names: a simple, private space for two people to build a shared list of
+So I built Namesake: a simple, private space for two people to build a shared list of
 name candidates, vote on them independently, and then compare results together.
 
 ## What it does
@@ -31,14 +32,14 @@ name candidates, vote on them independently, and then compare results together.
 ## Screenshots
 
 <div class="not-prose flex flex-wrap justify-center gap-6">
-  <img src="/images/little-names/screenshot-home.png" alt="Little Names home screen with 'Create a room' and 'Join a room' buttons" class="w-44 rounded-2xl border border-sand shadow-sm" />
-  <img src="/images/little-names/screenshot-card.png" alt="A Little Names voting card for the name 'Emma', with origin and yay/nay buttons" class="w-44 rounded-2xl border border-sand shadow-sm" />
-  <img src="/images/little-names/screenshot-suggest.png" alt="The Suggest names dialog, where you describe the kind of name you're looking for" class="w-44 rounded-2xl border border-sand shadow-sm" />
+  <img src="/images/namesake/screenshot-home.png" alt="Namesake home screen with 'Create a room' and 'Join a room' buttons" class="w-44 rounded-2xl border border-sand shadow-sm" />
+  <img src="/images/namesake/screenshot-card.png" alt="A Namesake voting card for the name 'Emma', showing its origin and meaning with nay and yay buttons below" class="w-44 rounded-2xl border border-sand shadow-sm" />
+  <img src="/images/namesake/screenshot-suggest.png" alt="The Suggest names dialog, where you describe the kind of name you're looking for" class="w-44 rounded-2xl border border-sand shadow-sm" />
 </div>
 
 ## Try it
 
-Little Names is live at [little-names-2026.vercel.app](https://little-names-2026.vercel.app/).
+Namesake is live at [little-names-2026.vercel.app](https://little-names-2026.vercel.app/).
 Create a room, send the code to your partner, and start swiping.
 
 ## How I built it
