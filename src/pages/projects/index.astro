@@ -32,7 +32,7 @@ const grouped = categories.map((category) => ({
   slug: slugify(category),
   items: allProjects
     .filter((p) => p.data.category === category)
-    .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title)),
+    .sort((a, b) => a.data.title.localeCompare(b.data.title)),
 }));
 ---
 
