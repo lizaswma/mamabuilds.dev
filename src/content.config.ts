@@ -40,6 +40,10 @@ const projects = defineCollection({
     betaAndroidOptInUrl: z.string().optional(),
     // Lower numbers show first within a category. Ties fall back to title.
     order: z.number().default(100),
+    // Date the project was added to the site. Drives the homepage's "Latest
+    // projects" section (newest first, then `order`). The /projects page still
+    // groups by category and sorts by `order`, so this is homepage-only.
+    added: z.coerce.date().optional(),
     // Set true to hide a project without deleting the file.
     draft: z.boolean().default(false),
   }),
