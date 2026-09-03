@@ -7,7 +7,6 @@ accessLabel: "Join the TestFlight beta"
 accessUrl: "https://testflight.apple.com/join/HMWmzFVR"
 iconImage: "/images/count-on-the-farm/icon.png"
 favicon: "/images/count-on-the-farm/favicon.png"
-order: 4
 added: 2026-08-11
 ---
 

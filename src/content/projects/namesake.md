@@ -7,7 +7,6 @@ accessLabel: "Try Namesake"
 accessUrl: "https://namesake.mamabuilds.dev/"
 iconImage: "/images/namesake/icon.png"
 favicon: "/images/namesake/favicon.png"
-order: 2
 added: 2026-08-09
 ---
 

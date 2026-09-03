@@ -6,7 +6,6 @@ status: "Private beta"
 accessLabel: "Request access"
 accessUrl: "https://mamabuilds.dev/"
 icon: "📖"
-order: 3
 added: 2026-08-09
 draft: false
 ---

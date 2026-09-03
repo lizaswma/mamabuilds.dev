@@ -6,7 +6,6 @@ status: "Beta"
 accessLabel: "Try the beta"
 accessUrl: "https://pm-ai-briefing.vercel.app/"
 icon: "🎧"
-order: 1
 added: 2026-08-08
 ---
 
