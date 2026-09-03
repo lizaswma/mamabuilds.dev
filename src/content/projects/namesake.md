@@ -4,7 +4,7 @@ category: "Family Life"
 summary: "A simple app for couples picking a baby name together - suggest candidates, swipe yay or nay privately, then compare notes to find the names you both love."
 status: "Beta"
 accessLabel: "Try Namesake"
-accessUrl: "https://little-names-2026.vercel.app/"
+accessUrl: "https://namesake.mamabuilds.dev/"
 iconImage: "/images/namesake/icon.png"
 favicon: "/images/namesake/favicon.png"
 order: 2
@@ -40,7 +40,7 @@ name candidates, vote on them independently, and then compare results together.
 
 ## Try it
 
-Namesake is live at [little-names-2026.vercel.app](https://little-names-2026.vercel.app/).
+Namesake is live at [namesake.mamabuilds.dev](https://namesake.mamabuilds.dev/).
 Create a room, send the code to your partner, and start swiping.
 
 ## How I built it

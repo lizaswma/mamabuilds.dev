@@ -9,6 +9,11 @@ export default defineConfig({
   // rather than the default username.github.io/repo-name path, so `base`
   // stays "/" — no repo-name prefix needed.
   site: 'https://mamabuilds.dev',
+  // Keep old project URLs working after a rename. Astro emits a static
+  // meta-refresh page for each entry, which is all GitHub Pages needs.
+  redirects: {
+    '/projects/little-names': '/projects/namesake',
+  },
   vite: {
     plugins: [tailwindcss()],
   },
