@@ -1,6 +1,6 @@
 ---
 title: "Yoto Stories Creator"
-category: "Family & Kids"
+category: "For Kids"
 summary: "A tool for creating custom audio stories for your little one - feed it an idea, preview the story in English, then generate it as an MP3 in Mandarin, Cantonese, or French to load straight onto your Yoto."
 status: "Private beta"
 accessLabel: "Request access"

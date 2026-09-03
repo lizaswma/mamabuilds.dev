@@ -1,6 +1,6 @@
 ---
 title: "Skillet"
-category: "Family & Kids"
+category: "Family Life"
 summary: "A shared weekly meal planner for busy households - plan the week together, keep your recipes in one place, and turn the plan into a grocery list."
 status: "Beta · PWA"
 accessLabel: "Try Skillet"

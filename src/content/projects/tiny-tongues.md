@@ -1,6 +1,6 @@
 ---
 title: "Tiny Tongues"
-category: "Family & Kids"
+category: "For Kids"
 summary: "A simple, ad-free flashcard app I built to teach my daughter Cantonese - now with Mandarin, French, and English too. Big colorful cards, tap-to-hear audio, no accounts, no ads, no tracking."
 status: "Beta · iOS + Android"
 betaTestFlightUrl: "https://testflight.apple.com/join/12UYZeeS"

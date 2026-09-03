@@ -1,6 +1,6 @@
 ---
 title: "Count on the Farm"
-category: "Family & Kids"
+category: "For Kids"
 summary: "A simple, cute counting game for toddlers - tap farm animals to count them, compare which side has more, and hear it all narrated in English or Mandarin."
 status: "Beta · TestFlight"
 accessLabel: "Join the TestFlight beta"
