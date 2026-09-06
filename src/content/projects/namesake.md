@@ -33,8 +33,8 @@ name candidates, vote on them independently, and then compare results together.
 
 <div class="not-prose flex flex-wrap justify-center gap-6">
   <img src="/images/namesake/screenshot-home.png" alt="Namesake home screen with 'Create a room' and 'Join a room' buttons" class="w-44 rounded-2xl border border-sand shadow-sm" />
-  <img src="/images/namesake/screenshot-card.png" alt="A Namesake voting card for the name 'Emma', showing its origin and meaning with nay and yay buttons below" class="w-44 rounded-2xl border border-sand shadow-sm" />
-  <img src="/images/namesake/screenshot-suggest.png" alt="The Suggest names dialog, where you describe the kind of name you're looking for" class="w-44 rounded-2xl border border-sand shadow-sm" />
+  <img src="/images/namesake/screenshot-nametype.png" alt="Choosing what type of names to look for: girl, boy, or gender-neutral" class="w-44 rounded-2xl border border-sand shadow-sm" />
+  <img src="/images/namesake/screenshot-card.png" alt="A Namesake voting card for the name 'Sage', showing its origin and meaning with nay and yay buttons below" class="w-44 rounded-2xl border border-sand shadow-sm" />
 </div>
 
 ## Try it
