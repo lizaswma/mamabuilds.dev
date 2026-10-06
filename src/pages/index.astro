@@ -25,21 +25,12 @@ const [latestPost] = (await getCollection('blog', ({ data }) => !data.draft)).so
       mamabuilds.dev
     </p>
     <h1 class="mt-4 text-balance font-display text-4xl font-semibold leading-tight text-ink sm:text-5xl">
-      Hi, I'm Liza. I'm a product manager who fell down the AI rabbit hole&nbsp;-
-      <span class="text-terracotta">and started building.</span>
+      Hi, I'm Liza.
+      <span class="mt-2 block text-xl text-terracotta sm:text-4xl">I'm a PM who builds apps with AI.</span>
     </h1>
     <p class="mt-6 text-balance text-lg leading-relaxed text-ink-soft">
-      As a working mom to a young toddler I really struggle to keep up with everything,
-      and I was worried I was missing out on this whole generative AI evolution. 
-      Then I realized the obvious: I should just build apps for myself!
-    </p>
-    <p class="mt-6 text-balance text-lg leading-relaxed text-ink-soft">
-      This is where I share what I make, and what I learn along the way. You'll find a
-      blend of apps for product managers and apps for a young family
-      like mine.
-    </p>
-    <p class="mt-6 text-balance text-lg leading-relaxed text-ink-soft">
-      Thanks for joining me on my little AI adventure!
+      As a working mom to a toddler, I was worried I'd fall behind on AI. Then I
+      realized the obvious: I should just build apps for myself!
     </p>
     <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
       <a
@@ -57,35 +48,30 @@ const [latestPost] = (await getCollection('blog', ({ data }) => !data.draft)).so
     </div>
   </section>
 
-  <!-- Bio / empowering blurb -->
+  <!-- Bio -->
   <section class="border-y border-sand bg-paper">
     <div class="mx-auto grid max-w-5xl gap-10 px-6 py-16 sm:grid-cols-[1.2fr_1fr] sm:items-center">
       <div>
         <h2 class="font-display text-2xl font-semibold text-ink sm:text-3xl">
-          A working mom, learning in public.
+          From PM to builder.
         </h2>
         <div class="mt-4 space-y-4 text-ink-soft leading-relaxed">
           <p>
-            I've spent my career as a product manager, where I get to work with some
-            of the smartest software engineers & designers to build apps that millions
-            and billions of consumers use. What I'd never done was build one of those
-            things myself.
+            I've spent my career as a product manager, working with some of the smartest
+            engineers & designers to build apps that millions of people use.
+            What I'd never done was build one myself. Now AI fills in the whole team - not
+            just engineers, but an army of PMs and designers I can bounce ideas off - so I
+            can go from idea to working app on my own.
           </p>
           <p>
-            Then AI tools got good enough that "I have an idea" and "I can ship it" stopped
-            being separated by years of learning to code. So between meetings, after bedtime,
-            and yes, sometimes during naptime, I started building: small apps that solve
-            real problems for me, for other PMs, and for my family. 
+            Between meetings, after bedtime, and yes, sometimes during naptime, I build
+            things for work and for my family. I love that I actually use what I make, and
+            when something feels off, I can fix it that same night. The best part is when
+            my daughter asks to use something I built - it makes me feel a lot less guilty
+            about screen time.
           </p>
           <p>
-            My niche - I've spent a lot of time figuring out how to build apps to further 
-            my daughter's language skills since we are trying to get her to learn both
-            Cantonese & Mandarin, which 
-            is particularly hard when each parent can only speak one and not the other.
-          </p>
-          <p>
-            If you're a mom, a PM, or just someone who's curious but intimidated - I hope
-            this site is proof that you can start today, with the time you actually have.
+            I'm sharing what I build and learn along the way - thanks for following along!
           </p>
         </div>
       </div>
@@ -95,15 +81,15 @@ const [latestPost] = (await getCollection('blog', ({ data }) => !data.draft)).so
         <ul class="mt-4 space-y-3 text-sm text-ink">
           <li class="flex gap-2">
             <span aria-hidden="true">🧩</span>
-            <span>Small, real apps I've built with AI - with plain instructions on how to try them.</span>
+            <span>Small apps I've built for PMs and busy families that you can try too.</span>
+          </li>
+          <li class="flex gap-2">
+            <span aria-hidden="true">🗣️</span>
+            <span>Language apps for my daughter, who's learning Cantonese & Mandarin from parents who each speak only one.</span>
           </li>
           <li class="flex gap-2">
             <span aria-hidden="true">✍️</span>
-            <span>Honest write-ups on what worked, what broke, and what I'd do differently.</span>
-          </li>
-          <li class="flex gap-2">
-            <span aria-hidden="true">🍼</span>
-            <span>A PM's-eye view of building for busy families, starting with my own.</span>
+            <span>Write-ups on what worked, what broke, and what I'd change.</span>
           </li>
         </ul>
       </div>
