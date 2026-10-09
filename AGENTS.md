@@ -20,3 +20,7 @@ Consult these guides before working on related tasks:
 - [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+
+## Projects
+
+When a change affects what a project offers — features, screenshots, access or beta links, or `status` — set `updated:` in that project's frontmatter (`src/content/projects/*.md`) to today's date. Site-wide maintenance (refactors, frontmatter cleanup, copy style passes) doesn't count. `added` is the first-published date and shouldn't change.
