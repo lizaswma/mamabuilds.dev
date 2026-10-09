@@ -13,12 +13,17 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { title, summary, status, accessLabel, accessUrl, icon, iconImage, favicon, category, androidEarlyAccess, betaTestFlightUrl, betaAndroidGroupUrl, betaAndroidOptInUrl } = project.data;
+const { title, summary, status, accessLabel, accessUrl, icon, iconImage, favicon, category, androidEarlyAccess, betaTestFlightUrl, betaAndroidGroupUrl, betaAndroidOptInUrl, added, updated } = project.data;
 const { Content } = await render(project);
 
 // When a project has beta links we show the dedicated "Join the beta" block
 // (with per-platform steps) instead of the generic top access button.
 const hasBeta = Boolean(betaTestFlightUrl || betaAndroidGroupUrl);
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+// Only show "Last updated" when it's actually later than first published.
+const showUpdated = updated && (!added || updated > added);
 ---
 
 <BaseLayout title={title} description={summary} favicon={favicon}>
@@ -52,6 +57,17 @@ const hasBeta = Boolean(betaTestFlightUrl || betaAndroidGroupUrl);
         </a>
       )}
     </div>
+
+    {(added || showUpdated) && (
+      <p class="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm text-ink-soft">
+        {added && (
+          <span>First published <time datetime={added.toISOString().slice(0, 10)}>{formatDate(added)}</time></span>
+        )}
+        {showUpdated && (
+          <span>Last updated <time datetime={updated.toISOString().slice(0, 10)}>{formatDate(updated)}</time></span>
+        )}
+      </p>
+    )}
 
     <div class="prose prose-headings:font-display prose-headings:text-ink prose-p:text-ink-soft prose-a:text-terracotta mt-10 max-w-none">
       <Content />

@@ -39,9 +39,14 @@ const projects = defineCollection({
     betaAndroidGroupUrl: z.string().optional(),
     betaAndroidOptInUrl: z.string().optional(),
     // Date the project was added to the site. Drives the homepage's "Latest
-    // projects" section (newest first, then title). The /projects page groups
+    // projects" section (newest first, then title) and is shown as "First
+    // published" on the detail page. The /projects page groups
     // by category and sorts alphabetically by title.
     added: z.coerce.date().optional(),
+    // Date the project was last meaningfully updated (new features, new
+    // screenshots, new access links), not site maintenance. Shown as "Last
+    // updated" on the detail page when later than `added`.
+    updated: z.coerce.date().optional(),
     // Set true to hide a project without deleting the file.
     draft: z.boolean().default(false),
   }),

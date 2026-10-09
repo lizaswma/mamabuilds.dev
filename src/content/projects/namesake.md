@@ -8,6 +8,7 @@ accessUrl: "https://namesake.mamabuilds.dev/"
 iconImage: "/images/namesake/icon.png"
 favicon: "/images/namesake/favicon.png"
 added: 2026-08-09
+updated: 2026-09-05
 ---
 
 ## Why I built this
