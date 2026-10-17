@@ -6,11 +6,11 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const { title, summary, status, accessLabel, accessUrl, icon, iconImage, betaTestFlightUrl, betaAndroidGroupUrl } = project.data;
+const { title, summary, status, accessLabel, accessUrl, icon, iconImage, appStoreUrl, betaTestFlightUrl, betaAndroidGroupUrl } = project.data;
 
-// A beta with per-platform steps: send the card straight to the project page's
-// "Join the beta" block rather than a single external link.
-const hasBeta = Boolean(betaTestFlightUrl || betaAndroidGroupUrl);
+// Store or beta links with per-platform steps: send the card straight to the
+// project page's access block rather than a single external link.
+const hasBeta = Boolean(appStoreUrl || betaTestFlightUrl || betaAndroidGroupUrl);
 ---
 
 <article class="flex flex-col justify-between rounded-2xl border border-sand bg-paper p-6 shadow-sm transition-shadow hover:shadow-md">
@@ -35,10 +35,10 @@ const hasBeta = Boolean(betaTestFlightUrl || betaAndroidGroupUrl);
   <div class="mt-6 flex items-center gap-4">
     {hasBeta ? (
       <a
-        href={`/projects/${project.id}#join-the-beta`}
+        href={`/projects/${project.id}#${appStoreUrl ? 'get-the-app' : 'join-the-beta'}`}
         class="inline-flex items-center gap-1.5 rounded-full bg-terracotta px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-terracotta-dark"
       >
-        Join the beta &rarr;
+        {appStoreUrl ? 'Get the app' : 'Join the beta'} &rarr;
       </a>
     ) : (
       accessUrl && accessLabel && (

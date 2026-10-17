@@ -13,12 +13,12 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { title, summary, status, accessLabel, accessUrl, icon, iconImage, favicon, category, androidEarlyAccess, betaTestFlightUrl, betaAndroidGroupUrl, betaAndroidOptInUrl, added, updated } = project.data;
+const { title, summary, status, accessLabel, accessUrl, icon, iconImage, favicon, category, androidEarlyAccess, appStoreUrl, betaTestFlightUrl, betaAndroidGroupUrl, betaAndroidOptInUrl, added, updated } = project.data;
 const { Content } = await render(project);
 
-// When a project has beta links we show the dedicated "Join the beta" block
+// When a project has store or beta links we show the dedicated access block
 // (with per-platform steps) instead of the generic top access button.
-const hasBeta = Boolean(betaTestFlightUrl || betaAndroidGroupUrl);
+const hasBeta = Boolean(appStoreUrl || betaTestFlightUrl || betaAndroidGroupUrl);
 
 const formatDate = (date: Date) =>
   date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
@@ -76,6 +76,7 @@ const showUpdated = updated && (!added || updated > added);
     {hasBeta && (
       <BetaAccess
         appName={title}
+        appStoreUrl={appStoreUrl}
         testFlightUrl={betaTestFlightUrl}
         androidGroupUrl={betaAndroidGroupUrl}
         androidOptInUrl={betaAndroidOptInUrl}
