@@ -2,14 +2,14 @@
 title: "Tiny Tongues"
 category: "For Kids"
 summary: "A simple, ad-free flashcard app I built to teach my daughter Cantonese - now with Mandarin, French, and English too. Big colorful cards, tap-to-hear audio, no accounts, no ads, no tracking."
-status: "Beta · iOS + Android"
-betaTestFlightUrl: "https://testflight.apple.com/join/12UYZeeS"
+status: "Live on iOS · Android beta"
+appStoreUrl: "https://apps.apple.com/app/tiny-tongues/id6795007584"
 betaAndroidGroupUrl: "https://groups.google.com/g/mamabuilds/about"
 betaAndroidOptInUrl: "https://play.google.com/apps/testing/dev.mamabuilds.tinytongues"
 iconImage: "/images/tiny-tongues/icon.jpg"
 favicon: "/images/tiny-tongues/favicon.png"
 added: 2026-08-08
-updated: 2026-08-27
+updated: 2026-10-16
 ---
 
 ## Why I built this
@@ -23,11 +23,13 @@ so I can confidently say it's useful for all ages.
 
 ## What it does
 
-- Tap through a range of categories including: **Animals, Vehicles, Colors, and Shapes**, with more decks planned.
+- Browse 15+ topics including **Animals, Vehicles, Colors, Shapes, Numbers, and Fruits**, with new topics added regularly.
 - Tap a card to hear the word - great for kids who are pre-reading or just starting to talk.
+- **Listen & match**, a simple game mode for when your little one is ready to test what they've learned.
 - Large, high-contrast cards designed for small hands and short attention spans.
 - No accounts, no ads, no data collection. It's just a flashcard app.
 - Bonus: I added support for Mandarin, French (for my nephew in Canada), and English (because why not).
+  Mandarin works offline from the first launch, and the other languages download from inside the app.
 
 ## Screenshots
 
@@ -43,5 +45,7 @@ process (and frustrations) in [The story behind Tiny Tongues](/blog/story-behind
 
 ## Where it's at
 
-It's stable enough for daily use in our house, but still rough around the edges - I'm
-actively adding decks and fixing bugs, and feedback of any kind is very welcome.
+Tiny Tongues is live on the App Store after a few rounds of review - I wrote up how that went in
+[Tiny Tongues is on the App Store, on the fourth try](/blog/tiny-tongues-on-the-app-store).
+Android is still in closed testing while I recruit enough testers to publish on Google Play.
+I'm still adding decks, and feedback of any kind is very welcome.

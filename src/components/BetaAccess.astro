@@ -10,33 +10,50 @@
 //     activate a tester after they opt in - the copy says so. Publish the
 //     opt-in ("tester") link here so testers don't have to dig for it.
 //
+//   - Once the iOS app is public, `appStoreUrl` replaces the TestFlight link and
+//     the block becomes "Get the app".
+//
 // Driven entirely by frontmatter - a project shows this block by setting any
-// of `betaTestFlightUrl` / `betaAndroidGroupUrl` / `betaAndroidOptInUrl`.
+// of `appStoreUrl` / `betaTestFlightUrl` / `betaAndroidGroupUrl` /
+// `betaAndroidOptInUrl`.
 interface Props {
   appName: string;
+  appStoreUrl?: string;
   testFlightUrl?: string;
   androidGroupUrl?: string;
   androidOptInUrl?: string;
 }
 
-const { appName, testFlightUrl, androidGroupUrl, androidOptInUrl } = Astro.props;
+const { appName, appStoreUrl, testFlightUrl, androidGroupUrl, androidOptInUrl } = Astro.props;
 
+const iosBeta = !appStoreUrl && testFlightUrl;
 const platformLabel =
-  testFlightUrl && androidGroupUrl ? 'iOS and Android' : testFlightUrl ? 'iOS' : 'Android';
+  iosBeta && androidGroupUrl ? 'iOS and Android' : iosBeta ? 'iOS' : 'Android';
+const intro = appStoreUrl
+  ? `${appName} is on the App Store${androidGroupUrl ? ', and in testing on Android' : ''}.`
+  : `${appName} is in testing on ${platformLabel}.`;
 
 const linkClass = 'font-semibold text-terracotta underline-offset-4 hover:underline';
 const buttonClass =
   'inline-flex items-center gap-1.5 rounded-full bg-terracotta px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-terracotta-dark';
 ---
 
-<section id="join-the-beta" class="not-prose mt-16 rounded-2xl border border-sand bg-paper p-6 sm:p-8">
-  <h2 class="font-display text-2xl font-semibold text-ink">Join the beta</h2>
-  <p class="mt-2 leading-relaxed text-ink-soft">
-    {appName} is in testing on {platformLabel}.
-  </p>
+<section id={appStoreUrl ? 'get-the-app' : 'join-the-beta'} class="not-prose mt-16 rounded-2xl border border-sand bg-paper p-6 sm:p-8">
+  <h2 class="font-display text-2xl font-semibold text-ink">{appStoreUrl ? 'Get the app' : 'Join the beta'}</h2>
+  <p class="mt-2 leading-relaxed text-ink-soft">{intro}</p>
 
   <div class="mt-6 grid gap-x-8 gap-y-8 sm:grid-cols-2">
-    {testFlightUrl && (
+    {appStoreUrl ? (
+      <div>
+        <p class="font-display text-lg font-semibold text-ink">iPhone &amp; iPad</p>
+        <p class="mt-1 leading-relaxed text-ink-soft">
+          Free on the App Store.
+        </p>
+        <a href={appStoreUrl} target="_blank" rel="noopener noreferrer" class={`mt-4 ${buttonClass}`}>
+          Download on the App Store &rarr;
+        </a>
+      </div>
+    ) : testFlightUrl && (
       <div>
         <p class="font-display text-lg font-semibold text-ink">iPhone &amp; iPad</p>
         <p class="mt-1 leading-relaxed text-ink-soft">

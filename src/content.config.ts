@@ -36,6 +36,10 @@ const projects = defineCollection({
     // iOS is a direct TestFlight install; Android requires joining the Google
     // Group first (Play closed-testing rule), then the opt-in link.
     betaTestFlightUrl: z.string().optional(),
+    // Public App Store listing. Once set, it replaces the TestFlight link in
+    // the block, which becomes "Get the app" (Android steps stay as-is while
+    // Android is still in closed testing).
+    appStoreUrl: z.string().optional(),
     betaAndroidGroupUrl: z.string().optional(),
     betaAndroidOptInUrl: z.string().optional(),
     // Date the project was added to the site. Drives the homepage's "Latest
