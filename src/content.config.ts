@@ -51,6 +51,13 @@ const projects = defineCollection({
     // screenshots, new access links), not site maintenance. Shown as "Last
     // updated" on the detail page when later than `added`.
     updated: z.coerce.date().optional(),
+    // Optional book series. Shows "Book N of the <name> series" under the
+    // title on the detail page, with the series name linking to `url`.
+    series: z.object({
+      name: z.string(),
+      url: z.string(),
+      book: z.number(),
+    }).optional(),
     // Set true to hide a project without deleting the file.
     draft: z.boolean().default(false),
   }),

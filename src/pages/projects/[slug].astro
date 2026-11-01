@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { title, summary, status, accessLabel, accessUrl, icon, iconImage, favicon, category, androidEarlyAccess, appStoreUrl, betaTestFlightUrl, betaAndroidGroupUrl, betaAndroidOptInUrl, added, updated } = project.data;
+const { title, summary, status, accessLabel, accessUrl, icon, iconImage, favicon, category, androidEarlyAccess, appStoreUrl, betaTestFlightUrl, betaAndroidGroupUrl, betaAndroidOptInUrl, added, updated, series } = project.data;
 const { Content } = await render(project);
 
 // When a project has store or beta links we show the dedicated access block
@@ -34,6 +34,11 @@ const showUpdated = updated && (!added || updated > added);
       <div>
         <p class="text-sm font-semibold uppercase tracking-wide text-terracotta">{category}</p>
         <h1 class="mt-2 font-display text-4xl font-semibold text-ink">{title}</h1>
+        {series && (
+          <p class="mt-2 text-lg text-ink-soft">
+            Book {series.book} of the <a href={series.url} class="font-semibold text-terracotta hover:text-terracotta-dark">{series.name} series</a>
+          </p>
+        )}
       </div>
       {iconImage ? (
         <img src={iconImage} alt="" class="h-16 w-16 rounded-2xl border border-sand object-cover shadow-sm" />

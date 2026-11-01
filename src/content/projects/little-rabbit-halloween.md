@@ -8,6 +8,10 @@ accessUrl: "https://halloween.mamabuilds.dev"
 iconImage: "/images/little-rabbit-halloween/icon.png"
 favicon: "/images/little-rabbit-halloween/favicon.png"
 added: 2026-09-11
+series:
+  name: "Little Rabbit"
+  url: "https://littlerabbit.mamabuilds.dev"
+  book: 1
 ---
 
 ## Why I built this

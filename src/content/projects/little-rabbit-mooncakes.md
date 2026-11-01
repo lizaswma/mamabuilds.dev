@@ -8,6 +8,10 @@ accessUrl: "https://mooncakes.mamabuilds.dev"
 iconImage: "/images/little-rabbit-mooncakes/icon.png"
 favicon: "/images/little-rabbit-mooncakes/favicon.png"
 added: 2026-09-13
+series:
+  name: "Little Rabbit"
+  url: "https://littlerabbit.mamabuilds.dev"
+  book: 2
 ---
 
 ## Why I built this
