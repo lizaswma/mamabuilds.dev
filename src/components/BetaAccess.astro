@@ -27,6 +27,7 @@ interface Props {
 const { appName, appStoreUrl, testFlightUrl, androidGroupUrl, androidOptInUrl } = Astro.props;
 
 const iosBeta = !appStoreUrl && testFlightUrl;
+const bothPlatforms = (appStoreUrl || testFlightUrl) && androidGroupUrl;
 const platformLabel =
   iosBeta && androidGroupUrl ? 'iOS and Android' : iosBeta ? 'iOS' : 'Android';
 const intro = appStoreUrl
@@ -42,7 +43,7 @@ const buttonClass =
   <h2 class="font-display text-2xl font-semibold text-ink">{appStoreUrl ? 'Get the app' : 'Join the beta'}</h2>
   <p class="mt-2 leading-relaxed text-ink-soft">{intro}</p>
 
-  <div class="mt-6 grid gap-x-8 gap-y-8 sm:grid-cols-2">
+  <div class:list={['mt-6 grid gap-x-8 gap-y-8', bothPlatforms && 'sm:grid-cols-2']}>
     {appStoreUrl ? (
       <div>
         <p class="font-display text-lg font-semibold text-ink">iPhone &amp; iPad</p>
