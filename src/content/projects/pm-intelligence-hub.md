@@ -2,11 +2,12 @@
 title: "PM Intelligence Hub"
 category: "Product Management"
 summary: "A daily AI news podcast that turns the day's headlines into a short briefing - with PM framing on what each update actually means for your job, not just what happened."
-status: "Beta"
-accessLabel: "Try the beta"
+status: "Live"
+accessLabel: "Try PM Intelligence Hub"
 accessUrl: "https://pm-ai-briefing.vercel.app/"
 icon: "🎧"
 added: 2026-08-08
+updated: 2026-11-19
 ---
 
 ## Why I built this
@@ -34,6 +35,6 @@ it translated into "here's what this actually means for how I do my job."
 
 ## Try it
 
-PM Intelligence Hub is currently in **beta** and live at
-[pm-ai-briefing.vercel.app](https://pm-ai-briefing.vercel.app/). I use it daily, but it's still
-early - feedback on what's useful (or what's missing) is very welcome.
+PM Intelligence Hub is live at
+[pm-ai-briefing.vercel.app](https://pm-ai-briefing.vercel.app/). I use it daily, and
+feedback on what's useful (or what's missing) is very welcome.

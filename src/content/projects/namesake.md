@@ -2,13 +2,13 @@
 title: "Namesake"
 category: "Family Life"
 summary: "A simple app for couples picking a baby name together - suggest candidates, swipe yay or nay privately, then compare notes to find the names you both love."
-status: "Beta"
+status: "Live"
 accessLabel: "Try Namesake"
 accessUrl: "https://namesake.mamabuilds.dev/"
 iconImage: "/images/namesake/icon.png"
 favicon: "/images/namesake/favicon.png"
 added: 2026-08-09
-updated: 2026-09-05
+updated: 2026-11-19
 ---
 
 ## Why I built this
