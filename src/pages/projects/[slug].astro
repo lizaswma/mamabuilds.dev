@@ -26,7 +26,7 @@ const formatDate = (date: Date) =>
 const showUpdated = updated && (!added || updated > added);
 ---
 
-<BaseLayout title={title} description={summary} favicon={favicon}>
+<BaseLayout title={title} description={summary} favicon={favicon} image={`/og/projects/${project.id}.png`}>
   <article class="mx-auto max-w-3xl px-6 py-16">
     <a href="/projects" class="text-sm font-semibold text-ink-soft hover:text-terracotta">&larr; All projects</a>
 
