@@ -28,7 +28,7 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 });
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={`/og/blog/${post.id}.png`}>
   <article class="mx-auto max-w-3xl px-6 py-16">
     <a href="/blog" class="text-sm font-semibold text-ink-soft hover:text-terracotta">&larr; All posts</a>
 
