@@ -38,7 +38,7 @@ from your own doctor. It's just the app that's helping me manage my own diagnosi
 ## Screenshots
 
 <div class="not-prose flex flex-wrap justify-center gap-6">
-  <img src="/images/eat-with-gdm/screenshot-history.png" alt="Eat with GDM history view for a day, showing fasting and post-meal glucose readings and logged meals (numbers and food details blurred for privacy)" class="w-44 rounded-2xl border border-sand shadow-sm" />
+  <img src="/images/eat-with-gdm/screenshot-history.png" alt="Eat with GDM history list showing each past day with its fasting reading, average post-meal glucose and number of meals logged (sample data)" class="w-44 rounded-2xl border border-sand shadow-sm" />
   <img src="/images/eat-with-gdm/screenshot-meal-timer.png" alt="Eat with GDM's meal timer screen, a 60-minute timer with a walk nudge at 30 minutes and a glucose-check reminder at 60 minutes" class="w-44 rounded-2xl border border-sand shadow-sm" />
 </div>
 
