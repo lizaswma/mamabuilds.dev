@@ -2,12 +2,13 @@
 title: "Skillet"
 category: "Family Life"
 summary: "A shared weekly meal planner for busy households - plan the week together, keep your recipes in one place, and turn the plan into a grocery list."
-status: "Beta · PWA"
+status: "Live"
 accessLabel: "Try Skillet"
 accessUrl: "https://skillet.mamabuilds.dev/"
 iconImage: "/images/skillet/icon.png"
 favicon: "/images/skillet/favicon.png"
 added: 2026-09-02
+updated: 2026-11-19
 draft: false
 ---
 
@@ -68,8 +69,8 @@ decided not to go - is in
 
 ## Try it
 
-Skillet is in **beta** at [skillet.mamabuilds.dev](https://skillet.mamabuilds.dev/) - I use it
-every week and it's still growing, so expect rough edges. Sign in with Google, then invite
+Skillet is live at [skillet.mamabuilds.dev](https://skillet.mamabuilds.dev/) - I use it
+every week. Sign in with Google, then invite
 your household members by email so everyone can contribute. On mobile, add it to your home
 screen - an installed PWA stays signed in between planning sessions, where a plain browser tab
 tends to log you out.
