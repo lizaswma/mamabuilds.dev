@@ -8,6 +8,7 @@ accessUrl: "https://testflight.apple.com/join/DCC4Q4fc"
 iconImage: "/images/eat-with-gdm/icon.png"
 favicon: "/images/eat-with-gdm/favicon.png"
 added: 2026-08-11
+updated: 2026-11-19
 ---
 
 ## Why I built this
@@ -19,9 +20,8 @@ so I used AI to build myself a simple app to make managing it just a little more
 
 Eat with GDM has a timer to remind me to check my glucose an hour after every meal, lets me
 log food by typing or voice, and looks up carb counts against a USDA database so I'm not doing
-mental math while I eat. I even built a coach into it to help me brainstorm GDM-friendly food
-pairings. I'm still iterating (I use it about six times a day!), but it feels good enough to
-put out as a beta.
+mental math while I eat. I'm still iterating (I use it about six times a day!), but it feels good
+enough to put out as a beta.
 
 The usual disclaimer applies: I'm not a medical expert, and this isn't a substitute for advice
 from your own doctor. It's just the app that's helping me manage my own diagnosis.
@@ -33,15 +33,13 @@ from your own doctor. It's just the app that's helping me manage my own diagnosi
 - Log meals and snacks by typing or voice, with a walk-after-eating toggle.
 - Look up carbs for common foods against a USDA food database directly in the app instead of
   having to go to another search engine.
-- An AI coach to help brainstorm GDM-friendly food pairings.
 - Export your log as a clean, doctor-shareable CSV or PDF for appointments.
 
 ## Screenshots
 
 <div class="not-prose flex flex-wrap justify-center gap-6">
-  <img src="/images/eat-with-gdm/screenshot-history.png" alt="Eat with GDM history view for a day, showing fasting and post-meal glucose readings and logged meals (numbers and food details blurred for privacy)" class="w-44 rounded-2xl border border-sand shadow-sm" />
+  <img src="/images/eat-with-gdm/screenshot-history.png" alt="Eat with GDM history list showing each past day with its fasting reading, average post-meal glucose and number of meals logged (sample data)" class="w-44 rounded-2xl border border-sand shadow-sm" />
   <img src="/images/eat-with-gdm/screenshot-meal-timer.png" alt="Eat with GDM's meal timer screen, a 60-minute timer with a walk nudge at 30 minutes and a glucose-check reminder at 60 minutes" class="w-44 rounded-2xl border border-sand shadow-sm" />
-  <img src="/images/eat-with-gdm/screenshot-coach.png" alt="Eat with GDM's AI coach screen answering a question about whether avocado toast is GD-friendly" class="w-44 rounded-2xl border border-sand shadow-sm" />
 </div>
 
 ## Try it
@@ -56,6 +54,6 @@ diabetes.*
 
 This is a native iOS app, built with SwiftUI and local-first storage, since keeping health data
 private and safe from loss mattered more here than anything else. No accounts, no sync, no
-analytics on health data - everything stays on-device unless you explicitly export it. The one
-exception is the coach: it sends some context to a small proxy service I built, so it can give
-AI-assisted food suggestions. The carb lookup is backed by the USDA FoodData Central database.
+analytics on health data - everything stays on-device unless you explicitly export it. The only
+thing that leaves your phone is the food name you type into search, which goes to the USDA
+FoodData Central database to look up carbs.
