@@ -2,11 +2,12 @@
 title: "Little Rabbit Timer"
 category: "For Kids"
 summary: "A toddler timer that shows time passing in carrots, not numbers: Little Rabbit eats through baby carrots for minutes and big carrots for longer stretches."
-status: "Beta · TestFlight"
-betaTestFlightUrl: "https://testflight.apple.com/join/4WGvU85C"
+status: "Live on iOS"
+appStoreUrl: "https://apps.apple.com/us/app/little-rabbit-timer/id6829575547"
 iconImage: "/images/little-rabbit-timer/icon.png"
 favicon: "/images/little-rabbit-timer/favicon.png"
 added: 2026-11-03
+updated: 2026-11-24
 ---
 
 ## Why I built this
@@ -32,6 +33,9 @@ I wrote more about the idea and how she reacted in
   playing, or getting ready for bed.
 - Ends with a slider she can move herself to dismiss the timer.
 - Shows the carrots on the lock screen while the timer runs, and has a Home Screen widget.
+- Speaks English and Mandarin. Tap EN | 中 to switch, and the widget, lock screen, and alarm follow.
+- Runs on Apple Watch too. Start a timer from your wrist, and Little Rabbit starts eating on the
+  iPhone.
 
 <div class="not-prose flex flex-wrap justify-center gap-6">
   <img src="/images/little-rabbit-timer/timer-picker.png" alt="The Little Rabbit Timer home screen, with Little Rabbit above timers shown as rows of carrots: one baby carrot for 1 minute, two for 2 minutes, one big carrot for 5 minutes, and three big carrots for 15 minutes." class="w-64 rounded-2xl border border-sand shadow-sm" />
