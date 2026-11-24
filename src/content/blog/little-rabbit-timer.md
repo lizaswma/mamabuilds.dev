@@ -6,6 +6,10 @@ tags: ["LittleRabbit", "iOSDevelopment"]
 project: little-rabbit-timer
 ---
 
+**Update, November 24, 2026:** Little Rabbit Timer is now
+[live on the App Store](https://apps.apple.com/us/app/little-rabbit-timer/id6829575547)! The first
+release also speaks Mandarin and runs on Apple Watch.
+
 My toddler insists on doing things herself. I want to give her that agency, but I also have to set
 boundaries. So when I can, I tell her, "Okay, one minute."
 
